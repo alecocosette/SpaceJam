@@ -6,6 +6,7 @@ public class EnemyMovementPatrol : MonoBehaviour
     public GameObject pointB;
     private Rigidbody2D rb;
     //private Animator anim;
+    //hi
     private Transform currentPoint;
     public float speed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
