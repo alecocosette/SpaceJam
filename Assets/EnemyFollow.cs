@@ -30,12 +30,12 @@ public class EnemyFollow : MonoBehaviour
                 Vector2 direction = (target.position - transform.position).normalized;
                 
                 // Move using velocity (works with collisions!)
-                rb.linearVelocity = direction * speed;
+                rb.velocity = direction * speed;
             }
             else
             {
                 // Stop moving when close to player
-                rb.linearVelocity = Vector2.zero;
+                rb.velocity = Vector2.zero;
             }
         }
     }
