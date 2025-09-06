@@ -1,0 +1,46 @@
+# Normalize line endings for all text files
+* text=auto
+
+# C# scripts
+*.cs text diff=csharp
+
+# Shader files
+*.shader text
+*.cginc text
+*.hlsl text
+
+# Unity text-based assets
+*.meta text merge=unityyaml
+*.unity text merge=unityyaml
+*.prefab text merge=unityyaml
+*.mat text merge=unityyaml
+*.anim text merge=unityyaml
+*.controller text merge=unityyaml
+*.asset text merge=unityyaml
+*.overrideController text merge=unityyaml
+*.physicsMaterial2D text merge=unityyaml
+*.physicsMaterial text merge=unityyaml
+*.guiskin text merge=unityyaml
+*.mask text merge=unityyaml
+
+# Prevent Git from messing with binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.tga binary
+*.psd binary
+*.gif binary
+*.bmp binary
+*.tif binary
+*.tiff binary
+*.fbx binary
+*.mp4 binary
+*.mov binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+
+# Unity YAML merge driver (if you install UnityYAMLMerge)
+# This helps resolve scene/prefab conflicts automatically
+*.unity merge=unityyaml
+*.prefab merge=unityyaml
