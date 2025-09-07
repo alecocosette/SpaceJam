@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2841000095043234104
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3866967431685055249, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2365184
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866967431685055249, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2660811
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866967431685055249, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.11825925
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866967431685055249, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.04434693
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866967431685055249, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056912, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_Name
+      value: FastBaguette
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056917, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: delay
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056917, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: speed
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056917, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: amplitude
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1777
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355359154749056918, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4702a80b615f7a44eb24192d1c9b2015, type: 3}

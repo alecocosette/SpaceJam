@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BaguetteTakeRelease : MonoBehaviour
 {
+    public Transform positionToShoot;
     private static int howManyBaguettes = 0;
     public GameObject projectile;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,7 +22,7 @@ public class BaguetteTakeRelease : MonoBehaviour
         if(howManyBaguettes > 0 && Input.GetKeyDown(KeyCode.E))
         {
             // cambia esta vaina cuando ya tengas el script;
-            Instantiate(projectile);
+            Instantiate(projectile, positionToShoot.position, positionToShoot.rotation);
             howManyBaguettes--;
         } 
     }

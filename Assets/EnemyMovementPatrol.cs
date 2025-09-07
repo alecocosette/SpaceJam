@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class EnemyMovementPatrol : MonoBehaviour
 {
-    public GameObject pointA;
-    public GameObject pointB;
+    public Transform pointA;
+    public Transform pointB;
     private Rigidbody2D rb;
     //private Animator anim;
     //hi
@@ -14,31 +14,25 @@ public class EnemyMovementPatrol : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
-        currentPoint = pointB.transform;
+        currentPoint = pointB;
         //anim.SetBool("isRunning", true);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector2 point = currentPoint.position - transform.position;
-        if (currentPoint == pointB.transform)
-        {
-            rb.velocity = new Vector2(-speed, 0);
-        }
-        else
-        {
-            rb.velocity = new Vector2(-speed, 0);
-        }
+        Vector2 direction = new Vector2(currentPoint.position.x - transform.position.x, 0).normalized;
+        rb.velocity = direction * speed;
 
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+        // Switch points when close enough
+        if (Mathf.Abs(transform.position.x - currentPoint.position.x) < 5f)
         {
-            currentPoint = pointA.transform;
+            currentPoint = currentPoint == pointA ? pointB : pointA;
+             
         }
-
-                if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
-        {
-            currentPoint = pointB.transform;
-        }
+        if (direction.x > 0)
+            transform.localScale = new Vector3(3, 3, 1);
+        else if (direction.x < 0)
+            transform.localScale = new Vector3(-3, 3, 1);
     }
 }
