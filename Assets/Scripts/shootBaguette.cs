@@ -1,44 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class ShootBaguette : MonoBehaviour
 {
-    public float delay = 5f;
-    public float speed = 12f;
-
-    private Vector2 direction = Vector2.right;
-    private Rigidbody2D rb;
-
-    void Awake()
+    public float delay = 5;
+    public float speed = 5f;
+    // Start is called before the first frame update
+    void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f;
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        Destroy(gameObject, delay);
     }
-
-    void OnEnable() => Destroy(gameObject, delay);
-
-    public void SetDirection(Vector2 shootDirection)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        direction = shootDirection.normalized;
-        rb.linearVelocity = direction * speed;
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    //    if (collision != null)
+    //    {
+    //        Destroy(gameObject);
+    //    }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            var boss = collision.GetComponent<SheepBossController>();
-            if (boss != null) boss.TakeDamage(1);
-            else Destroy(collision.gameObject);
-
-            Destroy(gameObject);
-        }
-        else if (collision.CompareTag("Ground") || collision.CompareTag("Wall"))
-        {
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }
+    // Update is called once per frame
+    void Update()
+    {
+        
+            transform.Translate(Vector3.right * speed * Time.deltaTime, Space.Self);
+        
+        
+    }
 }
+
