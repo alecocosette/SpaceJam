@@ -22,7 +22,7 @@ public class WoolProjectile : MonoBehaviour
     public void SetDirection(Vector2 dir)
     {
         Vector2 direction = dir.normalized;
-        rb.linearVelocity = direction * speed;
+        rb.velocity = direction * speed;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -32,8 +32,9 @@ public class WoolProjectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerHealth>()?.TakeDamage(damage);
+            
             Destroy(gameObject);
+            //Do game over
         }
         else if (other.CompareTag("Ground") || other.CompareTag("Wall"))
         {

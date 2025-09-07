@@ -74,7 +74,7 @@ public class PlatformWool : MonoBehaviour
 
         if (rb != null)
         {
-            rb.linearVelocity = Vector2.zero;
+            rb.velocity = Vector2.zero;
             rb.gravityScale = 0;
             rb.freezeRotation = true;
             rb.bodyType = RigidbodyType2D.Kinematic;

@@ -65,11 +65,11 @@ public class SheepBossController : MonoBehaviour
         
         Vector2 dir = (player.position - transform.position).normalized;
         
-        Vector2 v = rb.linearVelocity;
+        Vector2 v = rb.velocity;
         v.y = 0f;
-        rb.linearVelocity = v;
+        rb.velocity = v;
         
-        rb.linearVelocity = new Vector2(dir.x * moveSpeed, jumpForce);
+        rb.velocity = new Vector2(dir.x * moveSpeed, jumpForce);
     }
     
     void Shoot()
@@ -122,7 +122,17 @@ public class SheepBossController : MonoBehaviour
             platformScript.SetTarget(targetPosition);
         }
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Hit: " + collision.gameObject.name);
+
+        if (collision.CompareTag("ProjBaguette"))
+        {
+            Debug.Log("Enemy Hit: " + collision.gameObject.name);
+
+            TakeDamage(1);
+        }
+    }
     public void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
