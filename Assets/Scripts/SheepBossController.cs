@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SheepBossController : MonoBehaviour
 {
@@ -132,6 +133,10 @@ public class SheepBossController : MonoBehaviour
 
             TakeDamage(1);
         }
+        if (collision.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
     public void TakeDamage(int dmg)
     {
@@ -146,5 +151,6 @@ public class SheepBossController : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene("EndScreen");
     }
 }

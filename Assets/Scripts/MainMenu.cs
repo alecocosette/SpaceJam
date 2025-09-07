@@ -7,15 +7,23 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.Log("hitting");
         SceneManager.LoadScene(gameSceneName);
     }
 
     public void QuitGame()
     {
+
+        if (SceneManager.GetActiveScene().name.Equals("FirstLevel")){
+            SceneManager.LoadScene("Main Menu");
+        }
+        else
+        {
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
+
+            Application.Quit();
 #endif
+        }
     }
 }

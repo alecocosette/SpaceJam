@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
@@ -37,5 +38,6 @@ namespace Assets.Scripts
             else if (direction.x < 0)
                 transform.localScale = new Vector3(-3, 3, 1);
         }
+        
     }
 }

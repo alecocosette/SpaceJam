@@ -5,14 +5,16 @@ using UnityEngine;
 public class DeathScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
+        if (collision.CompareTag("Enemy"))
+        {
+            //Game Over Screen
+        }
+        if (collision.CompareTag("Sheep"))
+        {
+            //Game Over Screen
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

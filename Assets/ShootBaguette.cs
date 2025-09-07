@@ -7,7 +7,7 @@ namespace Assets
 {
     public class ShootBaguette : MonoBehaviour
     {
-        public float delay = 5;
+        public float delay = 0;
         public float speed = 5f;
         // Start is called before the first frame update
         void Start()
