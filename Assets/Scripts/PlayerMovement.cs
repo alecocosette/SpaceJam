@@ -11,8 +11,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    
-
+    public AudioClip jumpClip;
+    private AudioSource jumpSource;
+    private void Start()
+    {
+        jumpSource = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         // Jump input - Space key
         if (Keyboard.current.spaceKey.wasPressedThisFrame && IsGrounded())
         {
+            jumpSource.PlayOneShot(jumpClip);
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
         if (Keyboard.current.spaceKey.wasReleasedThisFrame && rb.velocity.y > 0f)
